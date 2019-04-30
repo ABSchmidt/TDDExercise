@@ -88,6 +88,7 @@ namespace Metric_Imperial_ConverterTest
         {
             Assert.AreEqual(19.35, converter.Convert(63.5));
         }
+
         /// <summary>
         /// If input is negative the method should return -1.
         /// </summary>
@@ -97,7 +98,14 @@ namespace Metric_Imperial_ConverterTest
             Assert.AreEqual(-1, converter.Convert(-4));
         }
 
-
+        /// <summary>
+        /// Convert method should receive 40 and convert it from feet to meters. It should return a double.
+        /// </summary>
+        [TestMethod]
+        public void Convert_40feet_to_meters()
+        {
+            Assert.AreEqual(12.19, converter.Convert(40));
+        }
 
     }
 }
